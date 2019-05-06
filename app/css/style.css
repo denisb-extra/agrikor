@@ -1,0 +1,141 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900");
+/* /Fonts */
+/* Global */
+html {
+  margin: 0 !important; }
+
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  padding-top: 80px;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: #000; }
+
+a {
+  text-decoration: none; }
+
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  direction: rtl; }
+
+p {
+  margin: 0; }
+
+ul {
+  -webkit-padding-start: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+section {
+  width: 100%;
+  max-width: 1920px;
+  margin: auto;
+  overflow: hidden; }
+
+.section-inner {
+  max-width: 1392px;
+  padding: 0 10px;
+  width: 100%;
+  margin: auto; }
+
+/* ---------------------- header ---------------------- */
+header {
+  height: 80px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background: #fff;
+  -webkit-filter: drop-shadow(0px 3px 8px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(0px 3px 8px rgba(0, 0, 0, 0.25));
+  font-size: 0;
+  z-index: 99; }
+  header .header-inner {
+    height: 100%;
+    max-width: 1680px;
+    padding: 0 10px;
+    width: 100%;
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  header .logo {
+    width: 440px; }
+  header .part-left {
+    width: 440px;
+    white-space: nowrap;
+    text-align: left; }
+  header .menu-cont .main-menu {
+    margin: 0 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    header .menu-cont .main-menu li {
+      background: #fff;
+      -webkit-transition: 0.5s;
+      transition: 0.5s;
+      padding: 30px 20px; }
+      header .menu-cont .main-menu li.current_page_item, header .menu-cont .main-menu li:hover {
+        background: #94c9ff; }
+        header .menu-cont .main-menu li.current_page_item a, header .menu-cont .main-menu li:hover a {
+          font-family: 'Rubik', sans-serif;
+          font-weight: 400;
+          font-size: 17px;
+          color: #fff;
+          -webkit-transition: 0.5s;
+          transition: 0.5s; }
+      header .menu-cont .main-menu li a {
+        font-family: 'Rubik', sans-serif;
+        font-weight: 400;
+        font-size: 17px;
+        color: #4d4d4d;
+        white-space: nowrap; }
+  header .credit-cards {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 15px; }
+  header .contact-cont {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: right; }
+    header .contact-cont .contact {
+      display: block; }
+      header .contact-cont .contact .icon, header .contact-cont .contact .text {
+        display: inline-block;
+        vertical-align: middle; }
+      header .contact-cont .contact .text {
+        margin-right: 10px; }
+        header .contact-cont .contact .text .line-1 {
+          font-family: 'Rubik', sans-serif;
+          font-weight: 900;
+          font-size: 22px;
+          line-height: 18px;
+          color: #7f0000; }
+        header .contact-cont .contact .text .line-2 {
+          font-family: 'Rubik', sans-serif;
+          font-weight: 900;
+          font-size: 17px;
+          line-height: 17px;
+          color: #7f0000; }
+          header .contact-cont .contact .text .line-2 strong {
+            font-family: 'Rubik', sans-serif;
+            font-weight: 900;
+            color: #007fff; }
+
+/* --------------------- /header ---------------------- */

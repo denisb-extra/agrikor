@@ -1,0 +1,102 @@
+/* ---------------------- header ---------------------- */
+header {
+	height: 80px;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	background: #fff;
+	filter: drop-shadow(0px 3px 8px rgba(0, 0, 0, 0.25));
+	font-size: 0;
+	z-index: 99;
+	.header-inner {
+		height: 100%;
+		max-width: 1680px;
+		padding: 0 10px;
+		width: 100%;
+		margin: auto;
+	
+
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	
+	.logo {
+		width: 440px;
+	}
+	.part-left {
+		width: 440px;
+		white-space: nowrap;
+		text-align: left;
+	}
+	.menu-cont {
+
+		.main-menu {
+			margin: 0 15px;
+			display: flex;
+			justify-content: space-between;
+			
+			li {
+				background: #fff;
+				transition: 0.5s;
+				padding: 30px 20px;
+				&.current_page_item, &:hover {
+					background: #94c9ff;
+					a {
+						@include f-r;
+						font-size: 17px;
+						color: #fff;
+						transition: 0.5s;
+					}
+				}
+				a {
+					@include f-r;
+					font-size: 17px;
+					color: #4d4d4d;
+					white-space: nowrap;
+				}
+			}
+		}
+	}
+	
+	.credit-cards {
+		display: inline-block;
+		vertical-align: middle;
+		margin-left: 15px;
+	}
+	.contact-cont {
+		display: inline-block;
+		vertical-align: middle;
+		text-align: right;
+
+		.contact {
+			display: block;
+			.icon, .text {
+				display: inline-block;
+				vertical-align: middle;
+			}
+			.text {
+				margin-right: 10px;
+				.line-1 {
+					@include f-bl;
+					font-size: 22px;
+					line-height: 18px;
+					color: #7f0000;
+				}
+
+				.line-2 {
+					@include f-bl;
+					font-size: 17px;
+					line-height: 17px;
+					color: #7f0000;
+					strong {
+						@include f-bl;
+						color: #007fff;
+					}
+				}
+			}
+		}
+	}
+}
+/* --------------------- /header ---------------------- */
