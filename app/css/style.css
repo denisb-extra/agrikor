@@ -407,6 +407,10 @@ section.about {
       color: #000;
       line-height: 22px;
       padding: 40px 0px 35px 0px; }
+      section.about .part-content .content p {
+        margin-top: 20px; }
+        section.about .part-content .content p:first-child {
+          margin-top: 0; }
     section.about .part-content .read-more-bt {
       font-family: 'Rubik', sans-serif;
       font-weight: 400;

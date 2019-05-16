@@ -445,9 +445,14 @@ section.about {
 			@include f-r;
 			font-size: 17px;
 			color:#000;
-			 line-height: 22px;
-			
+			line-height: 22px;
 			padding: 40px 0px 35px 0px;
+			p {
+				margin-top: 20px;
+				&:first-child {
+					margin-top: 0;
+				}
+			}
 		}
 		.read-more-bt {
 			@include f-r;
