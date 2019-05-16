@@ -36,13 +36,14 @@ $(document).ready(function ($) {
         }
     });
     
-    $(".mobile-menu-cont").hide();
+   $(".mobile-menu-cont").hide();
 
-    $('.mobile-menu ul.sub-menu').hide();
+   $('.mobile-menu ul.sub-menu').hide();
 
     $(".mobile-menu .sub-menu").each(function( index ) {
         var mainMenuItem = $(this).parent(".menu-item"); 
-        var arrow = jQuery("<div class='open-arrow'><span>&#x25BC;</span></div>"); 
+       // var arrow = jQuery("<div class='open-arrow'><span>&#x25BC;</span></div>"); 
+       var arrow = jQuery("<div class='open-arrow'><i class='fa fa-angle-down'></i></div>"); 
         $(mainMenuItem).append(arrow);   
 
        

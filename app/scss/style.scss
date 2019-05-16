@@ -60,13 +60,14 @@
 /* Global */
 html {
 	margin: 0 !important;
+	overflow-x: hidden;
 }
 body {
 	position: relative;
 	margin: 0;
   	padding: 0;
-  	overflow-x: hidden;
-	padding-top: 80px;
+  	
+	padding-top: 50px;
   	@include f-r;
   	font-size: 20px;
   	color: #000;
@@ -92,7 +93,8 @@ ul {
 }
 section {
 	width: 100%;
-	max-width: 1920px;
+//	max-width: 1920px;
+max-width: 2112px;
 	margin: auto;	
 	overflow: hidden;
 }

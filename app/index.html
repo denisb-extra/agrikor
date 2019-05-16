@@ -23,7 +23,7 @@
 	<link rel="stylesheet" href="plugins/masterslider/skins/default/style.css" />
 	<script src="plugins/masterslider/masterslider.js"></script>
 
-
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
 <body>
 	<header>
@@ -31,6 +31,8 @@
 			<div class="logo">
 				<img src="images/logo.png" alt="">
 			</div>
+
+		
 
 			<div class="menu-cont">
 				<ul class="main-menu">
@@ -46,15 +48,33 @@
 			</div>
 
 			<div class="mobile-menu-cont">
-				<ul class="mobile-menu">
-					<li class="current_page_item"><a href="">עמוד הבית</a></li>
-					<li><a href="">אודות</a></li>
-					<li><a href="">שירות</a></li>
-					<li><a href="">בלוג</a></li>
-					<li><a href="">צור קשר</a></li>
-				</ul>
+					<ul class="mobile-menu">
+						<li class="current_page_item"><a href="">עמוד הבית</a></li>
+						<li><a href="">אודות</a></li>
+						<li id="menu-item-531" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-531"><a href="#">שירותי החברה</a>
+							<ul class="sub-menu">
+								<li id="menu-item-565" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-565"><a href="http://asher.s201.upress.link/%d7%a0%d7%99%d7%a7%d7%95%d7%99-%d7%a1%d7%a4%d7%95%d7%aa/">ניקוי ספות</a></li>
+								<li id="menu-item-566" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-566"><a href="http://asher.s201.upress.link/%d7%a0%d7%99%d7%a7%d7%95%d7%99-%d7%a1%d7%a4%d7%95%d7%aa-%d7%91%d7%94%d7%a8%d7%a6%d7%9c%d7%99%d7%94/">ניקוי ספות בהרצליה</a></li>
+								
+								<ul class="sub-menu">
+									<li id="menu-item-713" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-713"><a href="http://asher.s201.upress.link/service/%d7%a0%d7%99%d7%a7%d7%95%d7%99-%d7%a9%d7%98%d7%99%d7%97%d7%99%d7%9d/%d7%a0%d7%99%d7%a7%d7%95%d7%99-%d7%a9%d7%98%d7%99%d7%97%d7%99%d7%9d-%d7%9c%d7%a2%d7%a1%d7%a7%d7%99%d7%9d/">ניקוי שטיחים לעסקים</a></li>
+									<li id="menu-item-731" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-731"><a href="http://asher.s201.upress.link/%d7%a1%d7%95%d7%92%d7%99-%d7%a9%d7%98%d7%99%d7%97%d7%99%d7%9d/%d7%a0%d7%99%d7%a7%d7%95%d7%99-%d7%a9%d7%98%d7%99%d7%97%d7%99%d7%9d-%d7%9e%d7%a7%d7%99%d7%a8-%d7%9c%d7%a7%d7%99%d7%a8/">ניקוי שטיחים מקיר לקיר</a></li>
+									<li id="menu-item-723" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-723"><a href="http://asher.s201.upress.link/service/%d7%aa%d7%99%d7%a7%d7%95%d7%9f-%d7%a9%d7%98%d7%99%d7%97%d7%99%d7%9d/">תיקון שטיחים</a></li>
+									<li id="menu-item-727" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-727"><a href="#">סוגים נוספים</a>
+									<ul class="sub-menu">
+										<li id="menu-item-733" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-733"><a href="http://asher.s201.upress.link/%d7%a1%d7%95%d7%92%d7%99-%d7%a9%d7%98%d7%99%d7%97%d7%99%d7%9d/%d7%a0%d7%99%d7%a7%d7%95%d7%99-%d7%a9%d7%98%d7%99%d7%97%d7%99-%d7%a9%d7%90%d7%92%d7%99/">ניקוי שטיחי שאגי</a></li>
+										<li id="menu-item-730" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-730"><a href="http://asher.s201.upress.link/%d7%a1%d7%95%d7%92%d7%99-%d7%a9%d7%98%d7%99%d7%97%d7%99%d7%9d/%d7%a0%d7%99%d7%a7%d7%95%d7%99-%d7%a9%d7%98%d7%99%d7%97%d7%99%d7%9d-%d7%a4%d7%a8%d7%a1%d7%99%d7%99%d7%9d/">ניקוי שטיחים פרסיים</a></li>
+									</ul>
+								</li>
+								</ul>
+								</li>
+							</ul>
+						</li>
+						<li><a href="">שירות</a></li>
+						<li><a href="">בלוג</a></li>
+						<li><a href="">צור קשר</a></li>
+					</ul>
 			</div>
-			
 			<div class="part-left">
 				<div class="credit-cards">
 					<img src="images/index/credit-cards.png" alt="">
@@ -71,32 +91,512 @@
 						</span>
 					</a>
 				</div>
+				<div class="contact-cont-mobile">
+					<a href="tel:11700-502-503" class="contact">
+						<span class="icon"><img src="images/index/phone-icon.png" alt=""></span>
+						
+					</a>
+				</div>
+				<div class="toggle-button">
+					<span class="inner">
+						<div></div>
+						<div></div>
+						<div></div>
+					</span>
+				</div>
 			</div>
-			
-
 		</div>
 	</header>
 
 	<section class="slider-top">
 		<div class="slider">
-			<div class="master-slider ms-skin-default" id="masterslider">
-			    <div class="ms-slide">
-			        <img src="plugins/masterslider/style/blank.gif" data-src="images/index/slider-main/1.jpg">  
-			    </div>
-			    <div class="ms-slide">
-			        <img src="plugins/masterslider/style/blank.gif" data-src="images/index/slider-main/2.jpg">  
-			    </div>
-			    <div class="ms-slide">
-			        <img src="plugins/masterslider/style/blank.gif" data-src="images/index/slider-main/3.jpg">  
-			    </div>
-			  
-			 
+			<div class="master-slider ms-skin-default" id="masterslider" style="position: relative">
+				
+				<div class="ms-slide ms-slider1">
+					<img src="images/index/slider-main/bg.jpg">	
+					
+					<img class="ms-layer ice_water " src="images/index/slider-main/ice_water.png" 
+						data-parallax="8" 
+						data-type="image" 
+						data-offset-x="758" 
+						data-offset-y="-90" 
+						data-origin="tl" 
+						data-effect = "right(100)"
+						data-position="normal"
+						data-delay="500"/>
+		
+					<img class="ms-layer fridge" src="images/index/slider-main/fridge1.png"
+						data-parallax="4" 
+						data-type="image" 
+						data-offset-x="1010" 
+						data-offset-y="90" 
+						data-origin="tl" 
+						data-effect = "right(200)"
+						data-position="normal"
+						data-delay="500"/>
+
+					<img  class="ms-layer lemon"  src="images/index/slider-main/lemon.png"
+						data-parallax="8" 
+						data-type="image" 
+						data-offset-x="1470" 
+						data-offset-y="480" 
+						data-origin="tl" 
+						data-effect = "right(200)"
+						data-position="normal"
+						data-delay="500" />
+					
+					<div class="ms-layer cont" 
+						data-parallax="5" 
+						data-offset-x="160" 
+						data-offset-y="160" 
+						data-origin="tl" 
+						data-effect = "top(50)"
+						data-delay="500">
+						<div class="line-1">
+							<img src="images/index/slider-main/icon2.png">
+							<img src="images/index/slider-main/icon1.png">
+						</div>
+						<div class="line-2"><div class="title">מערכת קירור מסחריות</div></div>
+						<div class="line-3"><a href="#">גלה עוד</a><a href="#">קריאת שירות</a></div>
+					</div>				
+				</div>
+				
+				<div class="ms-slide ms-slider2">
+					<img src="images/index/slider-main/bg.jpg">	
+					<img class="ms-layer fridge draggable" src="images/index/slider-main/fridge2.png"
+						data-parallax="4" 
+						data-type="image" 
+						data-offset-x="1220" 
+						data-offset-y="96" 
+						data-origin="tl" 
+						data-effect = "right(200)"
+						data-position="normal"
+						data-delay="400"/>
+
+					<div class="ms-layer cont" 
+						data-parallax="2" 
+						data-offset-x="180" 
+						data-offset-y="90" 
+						data-origin="tl" 
+					
+						data-position="normal"
+						data-delay="400">
+
+						<div class="line-1">
+							<img src="images/index/slider-main/icon2.png">
+							<img src="images/index/slider-main/icon1.png">
+						</div>
+						<div class="line-2">
+							<img src="images/index/slider-main/icon-advs4.png">
+							<img src="images/index/slider-main/icon-advs3.png">
+							<img src="images/index/slider-main/icon-advs2.png">
+							<img src="images/index/slider-main/icon-advs1.png">
+						</div>
+						<div class="line-3"><a href="#">גלה עוד</a><a href="#">קריאת שירות</a></div>
+					</div>				
+				</div>
+				
+				<div class="ms-slide ms-slider3">
+					<img src="images/index/slider-main/bg.jpg">	
+						
+					<img  class="ms-layer fruits" src="images/index/slider-main/fruits3.png" 
+						data-parallax="5" 
+						data-type="image" 
+						data-offset-x="936" 
+						data-offset-y="325" 
+						data-origin="tl" 
+						data-effect = "left(200)"
+						data-position="normal"
+						data-delay="800"/>
+		
+					<img class="ms-layer fridge" src="images/index/slider-main/fridge3.png"
+						data-parallax="2" 
+						data-type="image" 
+						data-offset-x="210" 
+						data-offset-y="100" 
+						data-origin="tl" 
+						data-effect = "left(200)"
+						data-position="normal"
+						data-delay="800"/>
+
+					<img  class="ms-layer lemon"  src="images/index/slider-main/lemon3.png"
+						data-parallax="4" 
+						data-type="image" 
+						data-offset-x="35" 
+						data-offset-y="440" 
+						data-origin="tl" 
+						data-effect = "left(200)"
+						data-position="normal"
+						data-delay="800"/>
+					
+					<div class="ms-layer cont " 
+						data-parallax="4" 
+						data-offset-x="1100" 
+						data-offset-y="180" 
+						data-origin="tl" 
+						data-effect = "top(50)"
+						data-position="normal"
+						data-delay="800">
+
+						<div class="line-1">
+							<img src="images/index/slider-main/icon2.png">
+							<img src="images/index/slider-main/icon1.png">
+						</div>
+						<div class="line-2"><div class="title">מערכת קירור מסחריות</div></div>
+						<div class="line-3"><a href="#">גלה עוד</a><a href="#">קריאת שירות</a></div>
+					</div>				
+				</div>
+			
+			</div>
+			<div class="line">
+				<img src="images/index/slider-main/slider-top-line.png">	
 			</div>
 		</div>
 	</section>
+	<section class="projects">
+		<div class="section-inner">
+			<div class="project-flex">
+				<div class="project-div-cot">
+					<a href="#">
+						<div class="images">
+							<img src="images/index/icon1.png">
+							<img class="line" src="images/index/icon-line.png">
+						</div>
+						<div class="title">משאבות חום</div>				
+					</a>
+				</div>
+				
+				<div class="project-div-cot">
+					<a href="#">
+						<div class="images">
+							<img src="images/index/icon2.png">
+							<img class="line" src="images/index/icon-line.png">
+						</div>
+						<div class="title">יחידות קירור</div>				
+					</a>	
+				</div>
+				<div class="project-div-cot">
+					<a href="#">
+						<div class="images">
+							<img src="images/index/icon1.png">
+							<img class="line" src="images/index/icon-line.png">
+						</div>
+						<div class="title">בניית חדרי קירור</div>
+					</a>				
+				</div>
+				<div class="project-div-cot">
+					<a href="#">
+						<div class="images">
+							<img src="images/index/icon3.png">
+							<img class="line" src="images/index/icon-line.png">
+						</div>
+						<div class="title">תיקון מיכלי חלב</div>
+					</a>			
+				</div>
+				<div class="project-div-cot">
+					<a href="#">
+						<div class="images">
+							<img src="images/index/icon4.png">
+							<img class="line" src="images/index/icon-line.png">
+						</div>
+						<div class="title">שוק פריזר</div>
+					</a>
+				</div>
+								
+			</div>
+		</div>
+	</section>
+	<section class="about">		
+			<div class="section-inner">
+				<div class="parts">
+					<div class="part-image">
+						<div class="cont">
+							<img src="images/index/articles_img1.jpg" alt="" class="main">
+						</div>
+					</div>
+					<div class="part-content">
+						<p class="title">אודות החברה</p>
+						<div class="content">
+							<p>
+								אגריקור הינה חברה בעלת ותק ומוניטין של למעלה מ-31 שנה בתחום מערכות הקירור המתקדמות. החברה מספקת את שירותיה עבור לקוחות עסקיים ומוסדיים, וכן עבור מושבים, קיבוצים ולקוחות פרטיים. לקוחות אגריקור נהנים משירות מקצועי, אדיב ומיידי – 24 שעות ביממה.
+							</p>
+						</div>
+						<a class="read-more-bt" href="#">קרא עוד</a>
+					</div>
+				</div>
+			</div>
+	</section>
+	<section class="project-slider">
+		<div class="section-inner">
+			<div class="owl-carousel owl-theme">
+				<div class="parts item">
+					<div class="part-content">
+						<p class="title">מערכת קירור לחקלאות ותעשייה</p>
+						<div class="content">
+							<p>לחברת אגריקור יש ותק וניסיון של עשרות שנים בתחום מערכות הקירור. הודות למבחר הגדול שאנו מעמידים לרשות קהל לקוחותינו, אנו מצליחים לספק מענה מושלם עבור מטרות רבות של לקוחות עסקיים, מוסדיים, פרטיים וכן עבור מושבים וקיבוצים. מערכת קירור מבית אגריקור כוללת:
+								<br><br>
+								צ'ילרים – מכשירים אלה משמשים כחלופה למערכות מיזוג האוויר. הם ידועים בעלותם הנמוכה, בחיסכון האנרגי שלהם ובכל שהם כמעט ואינם פוגעים בסביבה, תוך שמירה על טמפרטורה נעימה. נשמח להעניק לכם שירותים מקצועיים של בנייה ותחזוקה עבור כל אחד מהמוצרים האלה, בכל עת.</p>
+						</div>
+						<a class="read-more-bt" href="#">קרא עוד</a>
+					</div>
+					<div class="part-image">
+						<div class="cont">
+							<img src="images/index/article2.png" alt="" class="main">
+						</div>
+					</div>
+				</div>
+				<div class="parts item">
+					<div class="part-content">
+						<p class="title">מערכת קירור לחקלאות ותעשייה</p>
+						<div class="content">
+							<p>לחברת אגריקור יש ותק וניסיון של עשרות שנים בתחום מערכות הקירור. הודות למבחר הגדול שאנו מעמידים לרשות קהל לקוחותינו, אנו מצליחים לספק מענה מושלם עבור מטרות רבות של לקוחות עסקיים, מוסדיים, פרטיים וכן עבור מושבים וקיבוצים. מערכת קירור מבית אגריקור כוללת:
+								<br><br>
+								צ'ילרים – מכשירים אלה משמשים כחלופה למערכות מיזוג האוויר. הם ידועים בעלותם הנמוכה, בחיסכון האנרגי שלהם ובכל שהם כמעט ואינם פוגעים בסביבה, תוך שמירה על טמפרטורה נעימה. נשמח להעניק לכם שירותים מקצועיים של בנייה ותחזוקה עבור כל אחד מהמוצרים האלה, בכל עת.</p>
+						</div>
+						<a class="read-more-bt" href="#">קרא עוד</a>
+					</div>
+					<div class="part-image">
+						<div class="cont">
+							<img src="images/index/article2.png" alt="" class="main">
+						</div>
+					</div>
+				</div>
+				<div class="parts item">
+					<div class="part-content">
+						<p class="title">מערכת קירור לחקלאות ותעשייה</p>
+						<div class="content">
+							<p>לחברת אגריקור יש ותק וניסיון של עשרות שנים בתחום מערכות הקירור. הודות למבחר הגדול שאנו מעמידים לרשות קהל לקוחותינו, אנו מצליחים לספק מענה מושלם עבור מטרות רבות של לקוחות עסקיים, מוסדיים, פרטיים וכן עבור מושבים וקיבוצים. מערכת קירור מבית אגריקור כוללת:
+								<br><br>
+								צ'ילרים – מכשירים אלה משמשים כחלופה למערכות מיזוג האוויר. הם ידועים בעלותם הנמוכה, בחיסכון האנרגי שלהם ובכל שהם כמעט ואינם פוגעים בסביבה, תוך שמירה על טמפרטורה נעימה. נשמח להעניק לכם שירותים מקצועיים של בנייה ותחזוקה עבור כל אחד מהמוצרים האלה, בכל עת.</p>
+						</div>
+						<a class="read-more-bt" href="#">קרא עוד</a>
+					</div>
+					<div class="part-image">
+						<div class="cont">
+							<img src="images/index/article2.png" alt="" class="main">								
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="advantages">
+		<div class="section-inner">
+			<div class="boxes">
+				<div class="box">
+					<img src="images/icons/advantages-icon.png" alt="">
+					<p class="text">מעל 30 שנות ניסיון</p>
+				</div>
+				<div class="box">
+					<img src="images/icons/advantages-icon.png" alt="">
+					<p class="text">טכנאים מוסמכים</p>
+				</div>
+				<div class="box">
+					<img src="images/icons/advantages-icon.png" alt="">
+					<p class="text">חוזה שירות</p>
+				</div>
+				<div class="box">
+					<img src="images/icons/advantages-icon.png" alt="">
+					<p class="text">עד 5 שנות אחריות</p>
+				</div>
+				<div class="box">
+					<img src="images/icons/advantages-icon.png" alt="">
+					<p class="text">ייעוץ מקצועי וליווי הנדסי</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="project-comments">
+		<div class="section-inner">
+			<div class="title">
+				<div class="line-1">פרוייקטים נבחרים</div>
+				<div class="line-2">לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית קוואזי במר מודוף. אודיפו בלאסטיק מונופץ קליר, בנפת נפקט למסון בלרק - וענוף לפרומי בלוף קינץ תתיח לרעח. לת צשחמי צש בליא, מנסוטו </div>
+			</div>
+		</div>
+		<div class="slider">
+			<div class="item" style="width:900px">
+				<div class="caption">
+					<img class="logo" src="images/index/comment/1.jpg" alt="">
+					<div class="comments-cont">
+						<span class="image">
+							<img class="profile-image-bg" src="images/index/comment/comment-image.png" alt="">
+							<img class="profile-image" src="images/index/comment/man1.jpg">
+						</span>
+						<span class="text">
+							<p class="line-1">שלום ישראל</p>
+							<span class="line-2">מנכ״ל חברת טיב טעם</span>
+							<p class="line-3">קולהע צופעט למרקוח איבן איף, ברומץ כלרשט מיחוצים. קלאצי סחטיר בלובק. תצטנפל בלינדו למרקל אס לכימפו, דול, צוט ומעיוט - לפתיעם ברשג - ולתיעם גדדיש. קוויז דומור ליאמום בלינך רוגצה. לפמעט</p>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="company">
+		<div class="section-inner">
+			<div class="boxes">
+				<div class="box">
+					<img src="images/index/supersal.png" alt="">
+				</div>
+				<div class="box">
+					<img src="images/index/tivtam.png" alt="">
+				</div>
+				<div class="box">
+					<img src="images/index/bitan.png" alt="">
+				</div>
+				<div class="box">
+					<img src="images/index/mega.png" alt="">
+				</div>
+				<div class="box">
+					<img src="images/index/supersal_big.png" alt="">
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer>
+		<div class="contact">
+			<div class="section-inner">
+				<p class="title">ליצירת קשר עוד היום</p>
+				<div role="form" class="wpcf7" id="wpcf7-f245-o2" lang="he-IL" dir="rtl">
+					<form action="/lp/one/#wpcf7-f245-o2" method="post" class="wpcf7-form contact-form-inner" novalidate="novalidate">
+					<span class="wpcf7-form-control-wrap your-name">
+						<input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="*שם מלא:">
+					</span>
+					<span class="wpcf7-form-control-wrap your-tel">
+						<input type="tel" name="your-tel" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel" aria-required="true" aria-invalid="false" placeholder="*טלפון:">
+					</span>
+					<span class="wpcf7-form-control-wrap your-email"><input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-email" aria-invalid="false" placeholder="דוא״ל:"></span> 
+					<input type="submit" value="שליחה" class="wpcf7-form-control wpcf7-submit">
+				</form>
+				<p class="subtitle">1700-502-503 <span>לא מוותרים על איכות.</span></p>
+				<p class="sub_subtitle">להזמנת שירות מהיר לחצו <a href="#">כאן</a></p>
+				</div>
+			</div>
+		</div>
+		<div class="footer-top">
+			<div class="section-inner">
+				<div class="columns">
+					<div class="col">
+						<p class="title">מפת אתר</p>
+						<div class="content">
+							<ul class="main-menu">
+								<li><a href="">עמוד בית</a></li>
+								<li><a href="">אודות</a></li>
+								<li><a href="">מקומות לאירועים</a></li>
+								<li><a href="">הפקת אירועים</a></li>
+								<li><a href="">ספקים</a></li>
+								<li><a href="">בלוג</a></li>
+								<li><a href="">צור קשר</a></li>
+							</ul>
+						</div>
+					</div>
 
+					<div class="col">
+						<p class="title">מפת אתר</p>
+						<div class="content">
+							<ul class="main-menu">
+								<li><a href="">עמוד בית</a></li>
+								<li><a href="">אודות</a></li>
+								<li><a href="">מקומות לאירועים</a></li>
+								<li><a href="">הפקת אירועים</a></li>
+								<li><a href="">ספקים</a></li>
+								<li><a href="">בלוג</a></li>
+								<li><a href="">צור קשר</a></li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="col">
+						<p class="title">אירועים עסקיים</p>
+						<div class="content">
+							<ul class="main-menu">
+								<li><a href="">עמוד בית</a></li>
+								<li><a href="">אודות</a></li>
+								<li><a href="">מקומות לאירועים</a></li>
+								<li><a href="">הפקת אירועים</a></li>
+								<li><a href="">ספקים</a></li>
+								<li><a href="">בלוג</a></li>
+								<li><a href="">צור קשר</a></li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="col info">
+						<p class="title">מתמחים</p>
+						<div class="content">
+							<ul class="main-menu">
+								<p>רחוב דיזנגוף 342</p>
+								<p><strong>פקס:</strong> 03-5464864</p>
+								<p><strong>טלפון:</strong> 03-5464862</p>
+								<p><strong>שעות פעילות:</strong></p>
+								<p>יום א'- יום ה' 09:30-19:00</p>
+								<p>יום ו' 09:30-14:00</p>
+							</ul>
+						</div>
+					</div>
+
+					<div class="col info">
+						<p class="title">מתמחים</p>
+						<div class="content">
+							<ul class="main-menu">
+								<p>רחוב דיזנגוף 342</p>
+								<p><strong>פקס:</strong> 03-5464864</p>
+								<p><strong>טלפון:</strong> 03-5464862</p>
+								<p><strong>שעות פעילות:</strong></p>
+								<p>יום א'- יום ה' 09:30-19:00</p>
+								<p>יום ו' 09:30-14:00</p>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<div class="footer-bottom">
+				<div class="rights">© כל הזכויות שמורות לאגריקור</div>		
+				<div class="design"><img src="images/index/design.png"></div>
+				<div class="logo"><img src="images/logo.png"></div>
+			
+				
+		</div>
+	</footer>
 	<script>
 		$(document).ready(function ($) {
+
+			$('.owl-carousel').owlCarousel({
+				items : 1, 
+			loop:true,
+			margin:25,
+			nav:false, 
+			dots: true,
+			autoplay: false				
+			})
+
+			$( ".draggable" ).draggable();
+			
+			$('.project-comments .slider').addClass("owl-carousel");
+			$('.project-comments .slider').addClass("owl-theme");
+			$('.project-comments .slider').owlCarousel({
+				items : 3, 
+			    loop:true,
+			    margin:20,
+			    nav:false, 
+			    dots: true,
+				autoWidth:true,
+			    autoplay: true,
+			    smartSpeed: 1000,
+			    center: true,
+			    responsive : {
+			    	0 : {
+					  	margin:10,
+					},
+			    	500 : {
+			    		margin:30,
+						
+			    	}
+			    }
+			});
+
 			var sliderTop = new MasterSlider();
 			var w = $(window).width();
 			var h = w/2.39
