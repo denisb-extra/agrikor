@@ -267,6 +267,69 @@
 		</div>
 		</div>
 	</section>
+	
+<button id="myBtn">Open Modal</button>
+<div id="myModal" class="modal">
+	<div class="modal-content">
+	  	<span class="close">&times;</span>
+		<div class="contact">
+			<div class="section-inner">
+				<p class="title">ליצירת קשר עוד היום</p>
+				<div role="form" class="wpcf7" id="wpcf7-f245-o2" lang="he-IL" dir="rtl">
+					<form action="/lp/one/#wpcf7-f245-o2" method="post" class="wpcf7-form contact-form-inner" novalidate="novalidate">
+						<span class="wpcf7-form-control-wrap your-name">
+							<input type="text" name="your-name" value=""  class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="*שם מלא:">
+						</span>
+						<span class="wpcf7-form-control-wrap your-tel">
+							<input type="tel" name="your-tel" value=""  class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel" aria-required="true" aria-invalid="false" placeholder="*טלפון:">
+						</span>
+						<span class="wpcf7-form-control-wrap your-city">
+							<input type="text" name="your-city" value=""  class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-email" aria-invalid="false" placeholder="עיר">
+						</span>
+						<span class="wpcf7-form-control-wrap your-addres">
+							<input type="text" name="your-addres" value=""  class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-email" aria-invalid="false" placeholder="כתובת">
+						</span> 
+						<span class="wpcf7-form-control-wrap your-email">
+							<input type="email" name="your-email" value=""  class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-email" aria-invalid="false" placeholder="דוא״ל:">
+						</span> 
+						<span class="wpcf7-form-control-wrap your-message">
+							<input type="text" name="your-message" value=""  class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-email" aria-invalid="false" placeholder="נושא פנייה">
+						</span> 
+						<input type="submit" value="שליחה" class="wpcf7-form-control wpcf7-submit">
+					</form>			
+				</div>
+			</div>
+		</div>
+	</div>  
+</div>
+  
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+	modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+	modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+	if (event.target == modal) {
+	modal.style.display = "none";
+	}
+}
+</script>
 	<footer>
 		<div class="contact">
 			<div class="section-inner">

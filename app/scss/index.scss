@@ -24,7 +24,8 @@ header {
 	.logo {
 		width: 440px;
 		height: 100%;
-
+		padding-top:5px;
+		padding-bottom:5px;
 		img {
 			height: 100%;
 		}
@@ -76,6 +77,28 @@ header {
 		vertical-align: middle;
 		text-align: right;
 
+		&:hover .image {
+		
+			transform: rotate(360deg);
+		}
+
+
+		.images {
+			position: relative;
+			width: 58px;
+			margin: auto;
+
+			.image {
+				transition: 1s;
+			}
+
+			.sign {
+				top: 0px;
+				right: 0px;
+				position: absolute;
+			}
+		}
+
 		.contact {
 			display: block;
 			.icon, .text {
@@ -93,7 +116,7 @@ header {
 
 				.line-2 {
 					@include f-bl;
-					font-size: 17px;
+					font-size: 18px;
 					line-height: 17px;
 					color: #7f0000;
 					strong {
@@ -125,6 +148,7 @@ header {
 	@media only screen and (max-width: 1640px) {
 	//header
 		height: 50px;
+		top:0px!important;
 		.toggle-button {
 			display: inline-block;
 		}
@@ -137,6 +161,30 @@ header {
 /* --------------------- /header ---------------------- */
 
 /* ---------------------- slider-top ---------------------- */
+section.slider-top-image {
+	display: none;
+	background-image:url(../images/index/gallery.png);
+	
+	background-color: #fff;
+    width: 100%;
+    background-repeat: no-repeat;
+ 
+    background-position: center, center;
+  
+    background-size: cover;
+
+	@media only screen and (max-width : 1200px) {
+		display:block;
+		height: 500px;
+	}
+
+	@media only screen and (max-width : 800px) {
+		display:block;
+		height: 310px;
+	}
+
+}
+
 section.slider-top {
 	position:relative;
 	overflow: visible;
@@ -275,7 +323,7 @@ section.slider-top {
 	.line {
 	
 		position: absolute;
-		bottom: -36px;
+		bottom: -29px;
 		left: 0px;
 		z-index: 3;
 		width:100%;
@@ -285,12 +333,18 @@ section.slider-top {
 		}
 	}
 
-	@media only screen and (max-width : 1640px) {
-		.line {
-			//display: none;
-		}
+	@media only screen and (max-width : 1200px) {
+		
+		display:none;
 	}
 
+	@media only screen and (max-width : 1024px) {
+		.line {
+			bottom: -8%;
+		}	
+	}
+
+	
 }
 /* ---------------------- slider-top ---------------------- */
 
@@ -300,8 +354,9 @@ section.projects {
 		.project-flex {
 		display: flex;
 		flex-direction: row;
-		justify-content: space-between;
-		margin-top: -10px;
+		//justify-content: space-between;
+		justify-content: center;
+		margin-top: -60px;
 		margin-bottom: 10px;
 		padding-top: 60px;
 		text-align: center;
@@ -310,16 +365,16 @@ section.projects {
 		position: relative;
 		
 		.project-div-cot {
-			background-color: #fff;
-			padding: 40px;
-			margin: -40px;
-			margin-bottom: 10px;
-
+		//	background-color: #fff;
+			transition: 0.5s;
+			padding: 45px 35px;
+			margin: 0px;
+			margin-right: 10px;
 			.images {
 				position: relative;
 			
 			}
-					a {
+			a {
 				width:100%;
 				display: block;
 				position: relative;
@@ -329,15 +384,15 @@ section.projects {
 
 			.line {
 				position: absolute;
-				left: 0px;
-				top: 0px;
+				left: 3px;
+				top: 3px;
 				transition: 0.5s;
 				transform: rotate(0deg);
 				//transform-origin: top right ;
 						
 			}
 			&:hover {
-				filter: drop-shadow(0px 3px 8px rgba(0, 0, 0, 0.25));
+				box-shadow: 0px 6px 22px -9px rgba(0, 0, 0, 0.75);
 			
 					.line {
 						transform: rotate(-90deg);
@@ -357,12 +412,25 @@ section.projects {
 				@include f-m;
 				color:#000000;
 				font-size:24px;
-				padding-bottom: 40px;
+				padding-bottom: 0px;
 				width: 100%;
+				padding: 15px 0px 15px 0px;
+			}
+		}
+		@media only screen and (max-width : 1200px) {
+			.project-div-cot {
+				.title {
+					padding: 10px 0px 10px 0px!important;
+	  				 font-size: 18px!important;
+				}
 			}
 		}
 		@media only screen and (max-width : 900px) {
-			display:block;
+			//@at-rootdisplay:block;
+			display: flex;
+			flex-wrap: wrap;
+			margin-top: 0px;
+            margin-bottom: 45px;
 			.project-div-cot {
 				width:36%;
 				display: inline-block;
@@ -371,7 +439,8 @@ section.projects {
 				margin: -40px;
 				
 				.line {
-					left: 11%;	
+					left: 11%;
+					top:0px;
 				}
 				.title {
 					font-size: 20px;
@@ -380,9 +449,9 @@ section.projects {
 		}
 		@media only screen and (max-width : 730px) {
 				flex-direction: column;
-				
+				margin-top: -35px;
 				.project-div-cot {
-					padding: 0px;
+					padding: 10px 0px;
 					margin: -0px;
 						
 					width:100%;
@@ -409,7 +478,21 @@ section.projects {
 					}
 				}
 			
-		}	
+		}
+		
+		@media only screen and (max-width : 650px) {
+			.project-div-cot {
+				.title {
+					padding: 10px 0px 10px 0px!important;
+	  				 font-size: 18px!important;
+				}
+
+				&:hover {
+					box-shadow:none;
+					filter: none;
+				}
+			}
+		}
 	}
 }
 
@@ -445,19 +528,24 @@ section.about {
 			@include f-r;
 			font-size: 17px;
 			color:#000;
-			 line-height: 22px;
-			
-			padding: 40px 0px 35px 0px;
+			 line-height: 20px;			
+			 padding: 40px 0px 40px 0px;
 		}
 		.read-more-bt {
 			@include f-r;
 			font-size: 17px;
+			transition: 0.5s;
 			color:#007fff;
 			padding: 15px 45px;
 			border: 3px solid #007fff;
 			border-radius: 40px;
 			text-align: center;
 			display: inline-block;
+
+			&:hover {
+				background-color: #007fff;
+				color:#fff;
+			}
 				
 		}
 	}
@@ -518,8 +606,8 @@ section.about {
 				}
 
 				.content {
-				font-size: 14px;
-				padding: 20px 0px;
+					font-size: 16px!important;
+					padding: 20px 0px 20px 0px!important;
 				}
 			}
 		}
@@ -537,6 +625,15 @@ section.about {
 		}
 
 		 
+	}
+
+	@media only screen and (max-width : 650px) {
+		.part-content {
+			.content {
+				padding: 15px 0px 15px 0px!important;
+				font-size: 16px!important;
+			}
+		}
 	}
 
 	@media only screen and (max-width : 500px) {
@@ -560,15 +657,22 @@ section.project-slider {
 		padding: 0px 10px;
 		//@include border;
 		margin-top: 70px!important;
-		margin-bottom: 70px;
+		margin-bottom: 50px;
 	}
-	.parts {
+	.owl-carousel {
+	
+		width: 50%;
+	}
+	.parts-main {
 		display: flex;
 		align-items: center;
 	}
+	.parts {
+		
+	}
 	.part-content {
 		//@include border;
-		width: 50%;
+		width: 100%;
 		text-align: center;
 		.title {
 			@include f-m;
@@ -585,11 +689,17 @@ section.project-slider {
 			@include f-r;
 			font-size: 17px;
 			color:#007fff;
+			transition: 0.5s;
 			padding: 15px 45px;
 			border: 3px solid #007fff;
 			border-radius: 40px;
 			text-align: center;
 			display: inline-block;
+
+			&:hover {
+				background-color: #007fff;
+				color:#fff;
+			}
 			   
 		}
 	}
@@ -600,6 +710,10 @@ section.project-slider {
 		.cont {
 			display: inline-block;
 			position: relative;
+
+			img {
+				width:100%;
+			}
 		}
 	}
 
@@ -616,24 +730,34 @@ section.project-slider {
 		border-radius: 0px;			
 	}
 	.owl-theme .owl-dots {
-		position: absolute;
-		bottom: 0px;
-		right: 22%;
+		
+		position: relative;
+		top: 40px;
+		margin-top: 0px;
+		right: -8px;
 	}
 	@media only screen and (max-width : 1200px) {
 		.section-inner {
 			margin-top: 20px !important;
-			margin-bottom: 20px;
+			margin-bottom: 0px!important;
 			.owl-dots {
-				right: 0%;
-				left: 0%;
+				top: 10px;
+			}
+			.parts-main {
+				display: flex;
+				flex-direction: column;
+			}
+			.part-image {
+				width: 100%;
+				display: block;
+			}
+			.owl-carousel {
+	
+				width: 100%;
 			}
 			.parts {
-				display: block;
-				.part-image {
-					width: 100%;
 				
-				}
+				
 				.part-content {
 					width: 100%;
 					text-align: center;
@@ -641,8 +765,8 @@ section.project-slider {
 						font-size: 28px;
 					}
 					.content {
-						font-size: 14px;
-						padding: 20px 0px 20px 0px;
+						font-size: 16px!important;
+						padding: 20px 0px 20px 0px!important;
 					}
 					
 					.read-more-bt {
@@ -656,6 +780,24 @@ section.project-slider {
 		}
 		
 		
+	}
+	@media only screen and (max-width : 650px) {
+		.section-inner {
+					
+			.parts {
+				
+				
+				.part-content {
+					
+				
+					.content {
+						padding: 15px 0px 15px 0px!important;
+						font-size: 16px!important;
+					}
+				}
+			}
+		}
+
 	}
 	@media only screen and (max-width : 500px) {
 		.section-inner {
@@ -695,6 +837,18 @@ section.project-slider {
 section.advantages {
 	.section-inner {
 		padding: 100px 10px;
+		.images {
+			position: relative;
+			width: 67px;
+			margin: auto;
+
+			.sign {
+				top: 0px;
+				right: 0px;
+				position: absolute;
+			}
+		}
+		
 		.boxes {
 			//@include border;
 			display: flex;
@@ -705,13 +859,14 @@ section.advantages {
 				text-align: center;
 				margin: 0 20px;
 				cursor: pointer;
+				padding: 10px 0px;
 				&:hover {
-					img  {
-						transform: rotateY(360deg);
+					.image  {
+						transform: rotate(360deg);
 					}
 				}
 
-				img
+				.image
 				{
 					transition: 1s;
 				}
@@ -720,13 +875,24 @@ section.advantages {
 					@include f-m;
 					font-size: 24px;
 					color: #000;
-					margin-top: 25px;
+					margin-top: 15px;
 				}
 			}
 		}
 	}
 
-	
+	@media only screen and (max-width : 1200px) {
+		.section-inner {
+			padding: 20px 10px;
+			.boxes  {
+				.box {
+					.text {
+						font-size: 16px;
+					}
+				}
+			}
+		}
+	}
 
 	@media only screen and (max-width : 1024px) {
 		//advantages 
@@ -778,8 +944,9 @@ section.advantages {
 /* ---------------------- /advantages ---------------------- */
 
 /* ---------------------- company ---------------------- */
+@import 'jquery.simplyscroll';
 section.company {
-	.section-inner {
+	
 		padding: 100px 10px;
 		.boxes {
 			//@include border;
@@ -820,7 +987,7 @@ section.company {
 				}
 			}
 		}
-	}
+	
 
 	@media only screen and (max-width : 800px) {
 
@@ -848,7 +1015,10 @@ section.company {
 		}
 
 	}
+
+	
 }
+
 /* ---------------------- /company ---------------------- */
 
 /* ---------------------- project-comments ---------------------- */
@@ -926,17 +1096,42 @@ section.project-comments {
 				}
 				
 			}
+			
 		}
-		.owl-item .comments-cont
+		.owl-item 
 		{
-			display: none!important;
+			.image {
+				opacity: 0.5;
+				transition: 0.5s;
+			}
+			
+			.comments-cont
+			{
+				display: none!important;
+			}
 		}
-		.owl-item.active.center .comments-cont
+		.owl-item.active.center
 		{
-			display: flex!important;
+			.image {
+				opacity: 1;
+				transition: 0.5s;
+			}
+			
+			.comments-cont	{
+				display: flex!important;
+			}
 		}
 
-	
+		@media only screen and (max-width : 1200px) {
+
+			.title {
+				
+				.line-2 {
+					padding: 20px 0px 20px 0px!important;
+					font-size: 16px!important;
+				}
+			}
+		}
 		@media only screen and (max-width : 1024px) {
 			//project-comments
 
@@ -971,7 +1166,13 @@ section.project-comments {
 			}
 		}
 
-		
+		@media only screen and (max-width : 650px) {
+			.title .line-2 {
+				padding: 15px 0px 15px 0px!important;
+				font-size: 16px!important;
+				
+		   }
+		}
 
 		@media only screen and (max-width : 500px) {
 			.title .line-1 {
@@ -1219,6 +1420,16 @@ footer {
 			@include f-r;
 			font-size: 17px;
 			color: #3b4e67;
+		}
+
+		.design{
+
+			a{
+
+			@include f-r;
+			font-size: 17px;
+			color: #3b4e67;
+			}
 		}
 
 		@media only screen and (max-width : 1024px) {
@@ -1493,3 +1704,160 @@ footer {
 
 	}
 }
+
+/* --------------- popup ---------------- */
+#myModal {
+	.title {
+		@include f-m;
+		font-size: 36px;
+		color: #94c9ff;
+		margin-bottom: 25px;
+	}
+	.wpcf7-form-control-wrap {
+		width:calc(50% - 3px);
+		display: inline-block;
+		padding-left: 20px;
+	
+		 input, select {
+			@include f-m;
+			width: 100%;
+			 border: none;
+			 /* background: #94c9ff; */
+			 padding: 13px 25px;
+			 border-radius: 50px;
+			 outline: none;
+			 /* max-width: 295px; */
+			 margin: 5px 0px;
+			
+			 border: 2px solid #94c9ff;
+			 font-size: 16px;
+			 color: #000;
+			 @include placeholder-color(#4d4d4d);
+		 }
+
+		 select {
+			background: url(../images/icons/br_down.png) no-repeat right #fff;
+			-webkit-appearance: none;
+			background-position-x: 17px;
+		 }
+	}
+	
+
+	 .wpcf7 input[type="submit"] {
+		color: #6ea9e5;
+		background-color: #fff;
+		width: calc(100% - 21px);
+		margin-top: 25px;
+		display: block;
+		/* padding-left: 20px; */
+		margin-left: 67px;
+
+		@include f-m;
+		font-size: 18px;
+		color: #fff;
+		border: 2px solid #94c9ff;
+		background: #94c9ff;
+		padding: 15px 0px;
+		border-radius: 50px;
+		outline: none;
+		/* max-width: 295px; */
+		margin: 10px 0px;
+		transition: 0.5s;
+		@include placeholder-color(#4d4d4d);
+		&:hover {
+			background: #fff;
+			color: #94c9ff;
+			border: 2px solid #94c9ff;
+			cursor: pointer;
+		}
+	}
+	.your-message,.upload-file-451 {
+		width: 100%;
+	}
+
+	.wpcf7-textarea {
+		@include f-m;
+		width: 100%;
+		border: none;
+		/* background: #94c9ff; */
+		padding: 13px 25px;
+		border-radius: 20px;
+		outline: none;
+		/* max-width: 295px; */
+		margin: 5px 0px;
+		border: 2px solid #94c9ff;
+		font-size: 16px;
+		color: #000;
+		@include placeholder-color(#4d4d4d);
+	}
+
+	.codedropz-upload-inner {
+		
+		h3,a {
+		@include f-m;
+		margin: 5px 0;
+	   	font-size: 24px;
+		color: #4d4d4d;
+		margin-bottom: 0px;
+		margin-top: 0px;
+		}
+	}
+
+	@media only screen and (max-width : 1200px) {
+		.title {
+			font-size: 24px;
+			padding-right: 15px;
+		}
+		
+		.wpcf7-form-control-wrap {
+			width:100%;
+		}
+	}
+}
+
+
+
+
+
+
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	padding-top: 100px; /* Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	z-index: 99;
+  }
+  
+  /* Modal Content */
+  .modal-content {
+	background-color: #fefefe;
+	margin: auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%;
+  }
+  
+  /* The Close Button */
+  .close {
+	color: #aaaaaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+  }
+/* --------------- /popup ---------------- */
+
+

@@ -19,11 +19,14 @@ section.top-inner.about-page {
 		margin: auto;
 		display: flex;
 		justify-content: space-between;
-		align-items: center;
+        align-items: center;
+        position: relative;
         .icons {
             width: 440px;
             white-space: nowrap;
             text-align: left;
+            position: absolute;
+            left: 10px;
         }
         .title {
             @include f-m;
@@ -39,8 +42,13 @@ section.top-inner.about-page {
             font-size: 18px;
             color:#1c69ad;
             width: 440px;
-            position: relative;
-            top: 50px;
+            position: absolute;
+            bottom: 95px;
+            width: 100%;
+
+            a {
+                color: inherit;
+            }
             
         }
        
@@ -68,12 +76,15 @@ section.top-inner.about-page {
                width:100%;
                font-size: 36px;
                 line-height: 36px;
+                position: relative;
+                 top: -36px;
                 
             }
             .breadcrumbs {
                 font-size: 15px;
                 width: 100%;
-                top: inherit;
+                bottom: 20%;
+                right:20px;
             }
         }
     }
@@ -401,7 +412,12 @@ section.projects-about {
         background-color: #f6f6f7;
         .project-div-cot {
             
-            background-color: #f6f6f7;
+           
+            &:hover{
+                background-color: #fff;
+                box-shadow: 0px 6px 22px -9px rgba(0, 0, 0, 0.75);
+				filter: none!important;
+            }
             @media only screen and (max-width: 1024px) {
                 .title {
                     font-size: 18px;
@@ -424,6 +440,7 @@ section.projects-about {
 
 section.work-process-gallery {
     .section-inner {
+        margin-bottom: 70px;
         .content-up {
                        
             width: 710px;
@@ -501,7 +518,7 @@ section.work-process-gallery {
          }
          
         @media only screen and (max-width : 900px) {
-            
+            margin-bottom: 25px;
             .content-up {
                        
                 width: 100%;
@@ -518,6 +535,7 @@ section.work-process-gallery {
              }
             .content-gallery {
                 flex-direction: column;
+                margin-bottom: 20px;
                 .col-left {
                     width: 100%;
                     position: relative;
@@ -672,54 +690,86 @@ section.projects-catalog {
      background-color: #f6f6f7; 
     
     .section-inner {
-        
+        margin-top: 75px;
       .project-flex {
         background-color: #f6f6f7; 
         display:block;
         .project-div-cot {
-            width:36%;
+            transition: 0.5s;
             display: inline-block;
-            background-color: #f6f6f7;
+            //background-color: transparent;
            padding:0px;
-           margin-bottom: 75px;
-           
+           margin: 0px 85px 75px 85px;
+           padding: 55px 75px 75px 55px;
             .line {
-                left: 32%;	
+                left: 3px;
+				top: 3px;
             }
             .title {
                 font-size: 20px;
             }
 
             &:hover {
+                background-color: #fff;
                 filter: none;
                 a {
-                    background-color:#fff;
-                    filter: drop-shadow(0px 3px 8px rgba(0, 0, 0, 0.25));
+                   
+                    background-color:inherit;
+                  //  filter: drop-shadow(0px 3px 8px rgba(0, 0, 0, 0.25));
                  }
                // filter: none;
             }
             
             a {
-                width: 360px;
+              //  min-width: 360px;
                 height: 100%;
-                padding-top: 30px;
+                padding-top: 0px;
                 margin: auto;
+                width:100%;
             }
         }
       }
-     
+      @media only screen and (max-width : 1360px) {
+        .project-flex {
+            margin-top: 0px;
+            margin-bottom: 45px;
+            padding: 0px;
+            .project-div-cot {
+                margin: 0px 85px 50px 85px;
+                padding: 50px;
+            }
+        }
+      }
+      @media only screen and (max-width : 900px) {
+        .project-flex {
+           
+            .project-div-cot {
+                background-color: inherit;
+            }
+        }
+        
+      }
 
-        @media only screen and (max-width : 736px) {
+        @media only screen and (max-width : 730px) {
+           
+                margin-top: 0px;
             .project-flex {
                 padding-top: 0px;
                 margin-bottom: 30px;
                 margin-top: 0px;
                 .project-div-cot {
-                    width:100%;
-                    margin-bottom: 0px;
+                    padding: 10px 0px;
+                    margin: -0px;
+                    width: 100%;
+
+                    &:hover {
+                        background-color: inherit;
+                    }
+
                     
                 }
             }
+        
         }
     }
     
@@ -784,7 +834,102 @@ section.catalog-text-down {
 /* ---------------------  Catalog Single Page ----------------- */
 
 /* ---------------------- Section content-parts ---------------------- */
+
 section.content-parts {
+	margin-top: 40px;
+	padding-bottom: 40px;
+	.parts {
+		display: flex;
+		flex-wrap: wrap;
+		font-size: 0;
+		width: 100%;
+	}
+	.part-image {
+        float:left; 
+        width: 50%; 
+        margin-top: 35px;
+        padding-right: 60px;
+     }
+
+	.part-full {
+		width: 100%;
+		margin-top: 35px;
+		img {
+			max-width: 100%;
+		}	
+	}
+	
+	.part-text {
+		&.text-right {
+			padding-left: 45px;
+		}
+		&.text-left {
+			padding-right: 45px;
+		}
+	}
+	.content {
+		@include f-r;
+		font-size: 18px;
+		color: #000;
+		.title {
+			@include f-m;
+			font-size: 36px;
+			color: #7f0000;
+		}
+		strong {
+			@include f-b;
+			font-size: 18px;
+			color: #3b3b3b;
+		}
+
+		p {
+			margin-top: 20px;
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+	}
+	
+
+	@media only screen and (max-width : 1024px) {
+		margin-top: 15px;
+		.parts {
+			.part-half {
+				width: 100%;
+			}
+			.part-image {
+				text-align: center;
+			}
+
+			.part-text {
+				&.text-right {
+					padding-left: 0px;
+				}
+				&.text-left {
+					padding-right: 0px;
+				}
+			}
+
+			&.text-left {
+				flex-direction: column-reverse;
+			}
+        }
+        
+        .content {
+            font-size: 16px!important;
+            .title {
+                font-size: 24px!important;
+            }
+
+            h2 {
+                font-size: 24px!important;
+            }
+        }
+	}
+}
+
+
+section.content-parts.single-catalog {
 	margin-top: 40px;
 	padding-bottom: 40px;
 	.parts {
@@ -867,9 +1012,18 @@ section.content-parts {
 			&.text-left {
 				flex-direction: column-reverse;
 			}
-		}
+        }
+        
+        .content {
+            font-size: 16px;
+            .title {
+                font-size: 25px;
+            }
+        }
 	}
 }
+
+
 /* --------------------- /Section content-parts ---------------------- */
 
 section.banner-contact {
@@ -916,7 +1070,7 @@ section.catalog-slider {
         }
        
          .owl-dots {
-            right: 50%;
+            right: 0%;
             bottom: -100px;
         }
         @media only screen and (max-width : 1200px) {
@@ -985,7 +1139,7 @@ section.tabs {
             width: 100%;
             text-align: center;
           
-            img {
+            .video {
                 padding: 0px 15px;
                
             }
@@ -1010,7 +1164,7 @@ section.tabs {
 
 
 
-    @media only screen and (max-width : 1200px) {
+    @media only screen and (max-width : 1300px) {
         background-color: #f6f6f7;
          padding-bottom: 200px;
          margin-bottom: -284px;
@@ -1034,7 +1188,7 @@ section.tabs {
                 width: 100%;
                 text-align: center;
             
-                img {
+                .video {
                     width: 100%;
                     max-width: 500px;
                 }
@@ -1051,10 +1205,23 @@ section.tabs {
 
     @media only screen and (max-width : 600px) {
         .section-inner {
-            margin-bottom: 0px;
+            margin-bottom: 50px;
+            margin-top: 50px;
+            ul {
+                flex-direction: row;
+                li {
+                    width:33%;
+                    a {
+                        font-size: 18px;
+                        height: 40px;
+                        line-height: 40px;
+                    }
+                }
+            }
             .tab {
                 p {
-                    padding: 30px ;
+                    padding: 0px;
+                    font-size: 16px;
                     
                 }
              }
@@ -1085,7 +1252,13 @@ section.blog-gallery {
                 @include f-r;
                 font-size: 17px;
                 line-height: 22px;
-                color: #000;                
+                color: #000;
+                p {
+                    margin-top: 20px;
+                    &:first-child {
+                        margin-top: 0px;
+                    }
+                }
             }
          }
 
@@ -1104,13 +1277,18 @@ section.blog-gallery {
                     background-color: #f6f6f7;
                     border-radius: 10px;
                     .image {
+                      height: 160px;
+                    //    width: 262px;
                         img {
                             border-radius: 0px 10px 10px 0px;
+                            height: 100%;
+                            width: 238px;
                         }
                     }
                     .text {
                         padding-right: 35px;
                         padding-left: 35px;
+                        width: 100%;
                         .line-1 {
                             @include f-m;
                             font-size: 18px;
@@ -1118,12 +1296,27 @@ section.blog-gallery {
                             color: #007fff;
                             max-width: 250px;
                             margin-bottom: 15px;
+
+                           
                         }
                         .line-2 {
                             @include f-r;
                             font-size: 18px;
                             line-height: 22px;
                             color: #000;
+                            width: 58%;
+                            min-width: 326px;
+                          
+                            .cont-text {
+                           
+                                text-overflow: ellipsis;
+                                overflow: hidden;
+                                white-space: nowrap;
+                                width: calc(100% - 50px);
+                                text-align: right;
+                                height: 22px;
+                                padding: 0px;
+                            }
                         }
                     }
                     .icon {
@@ -1161,6 +1354,7 @@ section.blog-gallery {
                         width: calc(100% - 30px);
                         .image {
                             width:33%;
+                            height: inherit;
                             max-width: 200px;
                             img {
                             width: 100%;
@@ -1180,6 +1374,8 @@ section.blog-gallery {
                                font-size: 15px;
                                 line-height: 15px;
                                 color: #000;
+                                width: calc(100% - 80px);
+                                min-width: inherit;
                             }
                         }
                     }
@@ -1195,10 +1391,11 @@ section.blog-gallery {
                 margin-top: 60px;
                 margin-bottom: 40px;
                 .line-1 {
-                   
                     font-size: 17px;
                     line-height: 22px;
-                    color: #000;                    
+                    color: #000; 
+                    
+                  
                 }
              }
             .content-gallery {
@@ -1499,7 +1696,7 @@ section.content-parts.repair-single-slider {
                     //border: 1px solid #ccc;
                     text-align: center;
                     overflow: hidden;
-                    height: 160px;
+                    height: 100px;
                     width: 100%;
                     &.selected {
                         opacity: 0.5;
@@ -1547,40 +1744,17 @@ section.content-parts.repair-single-slider {
 
 /* ---------------------- Contact Page contact-inner ---------------------- */
 section.contact-inner {
-    .section-inner {
-        margin-bottom: 70px;
-        @media only screen and (max-width : 650px) {
-            margin-bottom: 0px;
-        }
-    }
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    background-image: url(../images/inner/contact.png);
 	margin-top: 70px;
     padding-bottom: 35px;
     
-    @media only screen and (max-width : 650px) {
-        padding-bottom: 0px;
-    }
-
 	.parts {
 		display: flex;
 		.part {
 			width: 50%;
-		}
-
-		@media only screen and (max-width : 1450px) {
-			.part {
-				img {
-					max-width: 100%;
-				}
-			} 
-		}
-
-		@media only screen and (max-width : 1200px) {
-			flex-wrap: wrap;
-			.part {
-				width: 100%;
-				padding: 0;
-			}
-		}
+		}	
 	}
 
 	.part-contact {
@@ -1600,30 +1774,25 @@ section.contact-inner {
 			margin-bottom: 75px;
 			.col {
 				margin: 0 15px;
-			}
-
-			@media only screen and (max-width : 650px) {
-				flex-direction: column;
-				margin-top: 30px;
-				margin-bottom: 45px;
-				.col {
-                    margin: 5px 15px;                    
-                }
-			}
+			}	
         }
-        
-
-        @media only screen and (max-width : 1200px) {
-            .title {
-                font-size: 24px;
-                
-            }
-         }
-
-	}
+    }
+    
 	.part-info.part {
         width: 50%;
-        padding-right: 100px;
+        padding-right: 150px;
+        .cols .col p {
+            margin-bottom: 35px;
+            @include f-r;
+            font-size: 20px;
+            color: #000;
+
+            strong {
+                @include f-m;
+                font-size: 20px;
+                color: #7f0000;
+            }
+        }
         .title {
 			@include f-m;
 			font-size: 36px;
@@ -1633,51 +1802,7 @@ section.contact-inner {
                  margin-bottom: 20px;                 
             }
         }
-        .cols {
-            position: relative;
-            .col {
-                p {
-                    margin-bottom: 35px;
-                    @include f-r;
-                    font-size: 20px;
-                    color:#000;
-                    strong {
-                        @include f-m;
-                        font-size: 20px;
-                        color:#7f0000;
-                    }
-                }
-            }
-
-            img {
-                position: absolute;
-                top:0px;
-                left:0px;
-
-                @media only screen and (max-width : 650px) {
-                    position: relative;
-                    top:0px;
-                    left:-40%
-                }
-            }
-
-            
-        }
-
-        @media only screen and (max-width : 1200px) {
-            width: 100%;
-            padding-right: 0px;
-            margin-top: 40px;
-
-            .title {
-               font-size: 24px;               
-            }
-        }
-
        
-       
-            
-         
 	}
 	.wpcf7 {
 		margin-top: 50px;
@@ -1772,10 +1897,38 @@ section.contact-inner {
 		}
 		
 	}
+	@media only screen and (max-width : 900px) {
+        .parts
+        {
+           flex-direction: column-reverse;
+            .part {
+                width: 100%;
+            }
+        }
+       .part-contact .title {
+            
+            font-size: 24px;
+       
+        }
+        .part-info.part {
+            
+            margin-bottom: 25px;
+            .cols .col p {
+                margin-bottom: 15px;
+              
+                font-size: 16px;
+               
+            }
+            padding-right: 0px;
+            font-size: 18px;
+            .title {
+                font-size: 24px;
+                 margin-bottom: 20px;
+            }
+        }
+
+    }
 	
-	@media only screen and (max-width : 1200px) {
-		background-size: 50%;
-	}
 	@media only screen and (max-width : 650px) {
 		
 		.wpcf7 {
@@ -1816,7 +1969,7 @@ section.contact-inner {
     }
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1366px) {
     .open-service {
         position: fixed;
         top: 50%;

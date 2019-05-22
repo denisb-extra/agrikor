@@ -24,15 +24,14 @@
 	<script src="plugins/masterslider/masterslider.js"></script>
 
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script type="text/javascript" src="js/jquery.simplyscroll.min.js"></script>
 </head>
 <body>
 	<header>
 		<div class="header-inner">
 			<div class="logo">
 				<img src="images/logo.png" alt="">
-			</div>
-
-		
+			</div>	
 
 			<div class="menu-cont">
 				<ul class="main-menu">
@@ -82,7 +81,13 @@
 
 				<div class="contact-cont">
 					<a href="tel:11700-502-503" class="contact">
-						<span class="icon"><img src="images/index/phone-icon.png" alt=""></span>
+						
+						<span class="icon">
+								<div class="images" >
+									<img class="image" src="images/index/phone-icon.png" alt="">
+									<img class="sign" src="images/index/phone-icon-hover.png" alt="">
+								</div>							
+						</span>
 						<span class="text">
 							<p class="line-1">700-502-503</p>
 							<span class="line-2">
@@ -93,7 +98,9 @@
 				</div>
 				<div class="contact-cont-mobile">
 					<a href="tel:11700-502-503" class="contact">
-						<span class="icon"><img src="images/index/phone-icon.png" alt=""></span>
+						<span class="icon">
+							<img src="images/index/phone-icon.png" alt="">
+						</span>
 						
 					</a>
 				</div>
@@ -107,7 +114,7 @@
 			</div>
 		</div>
 	</header>
-
+	<section class="slider-top-image" ></section>
 	<section class="slider-top">
 		<div class="slider">
 			<div class="master-slider ms-skin-default" id="masterslider" style="position: relative">
@@ -328,79 +335,78 @@
 	</section>
 	<section class="project-slider">
 		<div class="section-inner">
-			<div class="owl-carousel owl-theme">
-				<div class="parts item">
-					<div class="part-content">
-						<p class="title">מערכת קירור לחקלאות ותעשייה</p>
-						<div class="content">
-							<p>לחברת אגריקור יש ותק וניסיון של עשרות שנים בתחום מערכות הקירור. הודות למבחר הגדול שאנו מעמידים לרשות קהל לקוחותינו, אנו מצליחים לספק מענה מושלם עבור מטרות רבות של לקוחות עסקיים, מוסדיים, פרטיים וכן עבור מושבים וקיבוצים. מערכת קירור מבית אגריקור כוללת:
-								<br><br>
-								צ'ילרים – מכשירים אלה משמשים כחלופה למערכות מיזוג האוויר. הם ידועים בעלותם הנמוכה, בחיסכון האנרגי שלהם ובכל שהם כמעט ואינם פוגעים בסביבה, תוך שמירה על טמפרטורה נעימה. נשמח להעניק לכם שירותים מקצועיים של בנייה ותחזוקה עבור כל אחד מהמוצרים האלה, בכל עת.</p>
-						</div>
-						<a class="read-more-bt" href="#">קרא עוד</a>
-					</div>
-					<div class="part-image">
-						<div class="cont">
-							<img src="images/index/article2.png" alt="" class="main">
+			<div class="parts-main">
+				<div class="owl-carousel owl-theme">
+					<div class="parts item">
+						<div class="part-content">
+							<p class="title">מערכת קירור לחקלאות ותעשייה</p>
+							<div class="content">
+								<p>לחברת אגריקור יש ותק וניסיון של עשרות שנים בתחום מערכות הקירור. הודות למבחר הגדול שאנו מעמידים לרשות קהל לקוחותינו, אנו מצליחים לספק מענה מושלם עבור מטרות רבות של לקוחות עסקיים, מוסדיים, פרטיים וכן עבור מושבים וקיבוצים. מערכת קירור מבית אגריקור כוללת:
+									<br><br>
+									צ'ילרים – מכשירים אלה משמשים כחלופה למערכות מיזוג האוויר. הם ידועים בעלותם הנמוכה, בחיסכון האנרגי שלהם ובכל שהם כמעט ואינם פוגעים בסביבה, תוך שמירה על טמפרטורה נעימה. נשמח להעניק לכם שירותים מקצועיים של בנייה ותחזוקה עבור כל אחד מהמוצרים האלה, בכל עת.</p>
+							</div>
+							<a class="read-more-bt" href="#">קרא עוד</a>
 						</div>
 					</div>
-				</div>
-				<div class="parts item">
-					<div class="part-content">
-						<p class="title">מערכת קירור לחקלאות ותעשייה</p>
-						<div class="content">
-							<p>לחברת אגריקור יש ותק וניסיון של עשרות שנים בתחום מערכות הקירור. הודות למבחר הגדול שאנו מעמידים לרשות קהל לקוחותינו, אנו מצליחים לספק מענה מושלם עבור מטרות רבות של לקוחות עסקיים, מוסדיים, פרטיים וכן עבור מושבים וקיבוצים. מערכת קירור מבית אגריקור כוללת:
-								<br><br>
-								צ'ילרים – מכשירים אלה משמשים כחלופה למערכות מיזוג האוויר. הם ידועים בעלותם הנמוכה, בחיסכון האנרגי שלהם ובכל שהם כמעט ואינם פוגעים בסביבה, תוך שמירה על טמפרטורה נעימה. נשמח להעניק לכם שירותים מקצועיים של בנייה ותחזוקה עבור כל אחד מהמוצרים האלה, בכל עת.</p>
-						</div>
-						<a class="read-more-bt" href="#">קרא עוד</a>
-					</div>
-					<div class="part-image">
-						<div class="cont">
-							<img src="images/index/article2.png" alt="" class="main">
+					<div class="parts item">
+						<div class="part-content">
+							<p class="title">מערכת קירור לחקלאות ותעשייה</p>
+							<div class="content">
+								<p>לחברת אגריקור יש ותק וניסיון של עשרות שנים בתחום מערכות הקירור. הודות למבחר הגדול שאנו מעמידים לרשות קהל לקוחותינו, אנו מצליחים לספק מענה מושלם עבור מטרות רבות של לקוחות עסקיים, מוסדיים, פרטיים וכן עבור מושבים וקיבוצים. מערכת קירור מבית אגריקור כוללת:
+									<br><br>
+									צ'ילרים – מכשירים אלה משמשים כחלופה למערכות מיזוג האוויר. הם ידועים בעלותם הנמוכה, בחיסכון האנרגי שלהם ובכל שהם כמעט ואינם פוגעים בסביבה, תוך שמירה על טמפרטורה נעימה. נשמח להעניק לכם שירותים מקצועיים של בנייה ותחזוקה עבור כל אחד מהמוצרים האלה, בכל עת.</p>
+							</div>
+							<a class="read-more-bt" href="#">קרא עוד</a>
 						</div>
 					</div>
 				</div>
-				<div class="parts item">
-					<div class="part-content">
-						<p class="title">מערכת קירור לחקלאות ותעשייה</p>
-						<div class="content">
-							<p>לחברת אגריקור יש ותק וניסיון של עשרות שנים בתחום מערכות הקירור. הודות למבחר הגדול שאנו מעמידים לרשות קהל לקוחותינו, אנו מצליחים לספק מענה מושלם עבור מטרות רבות של לקוחות עסקיים, מוסדיים, פרטיים וכן עבור מושבים וקיבוצים. מערכת קירור מבית אגריקור כוללת:
-								<br><br>
-								צ'ילרים – מכשירים אלה משמשים כחלופה למערכות מיזוג האוויר. הם ידועים בעלותם הנמוכה, בחיסכון האנרגי שלהם ובכל שהם כמעט ואינם פוגעים בסביבה, תוך שמירה על טמפרטורה נעימה. נשמח להעניק לכם שירותים מקצועיים של בנייה ותחזוקה עבור כל אחד מהמוצרים האלה, בכל עת.</p>
-						</div>
-						<a class="read-more-bt" href="#">קרא עוד</a>
-					</div>
-					<div class="part-image">
-						<div class="cont">
-							<img src="images/index/article2.png" alt="" class="main">								
-						</div>
+				<div class="part-image">
+					<div class="cont">
+						<img src="images/index/article2.png" alt="" class="main">
 					</div>
 				</div>
+				
 			</div>
+				
+			
 		</div>
 	</section>
 	<section class="advantages">
 		<div class="section-inner">
 			<div class="boxes">
 				<div class="box">
-					<img src="images/icons/advantages-icon.png" alt="">
+					<div class="images" >
+						<img class="image" src="images/icons/advantages-icon.png" alt="">
+						<img class="sign"  src="images/icons/advantages-icon-hover.png" alt="">
+					</div>
 					<p class="text">מעל 30 שנות ניסיון</p>
 				</div>
 				<div class="box">
-					<img src="images/icons/advantages-icon.png" alt="">
+					<div class="images" >
+						<img class="image" src="images/icons/advantages-icon.png" alt="">
+						<img class="sign"  src="images/icons/advantages-icon-hover.png" alt="">
+					</div>
 					<p class="text">טכנאים מוסמכים</p>
 				</div>
 				<div class="box">
-					<img src="images/icons/advantages-icon.png" alt="">
+					<div class="images" >
+						<img class="image" src="images/icons/advantages-icon.png" alt="">
+						<img class="sign"  src="images/icons/advantages-icon-hover.png" alt="">
+					</div>
 					<p class="text">חוזה שירות</p>
 				</div>
 				<div class="box">
-					<img src="images/icons/advantages-icon.png" alt="">
+						<div class="images" >
+							<img class="image" src="images/icons/advantages-icon.png" alt="">
+							<img class="sign"  src="images/icons/advantages-icon-hover.png" alt="">
+						</div>
 					<p class="text">עד 5 שנות אחריות</p>
 				</div>
 				<div class="box">
-					<img src="images/icons/advantages-icon.png" alt="">
+					<div class="images" >
+						<img class="image" src="images/icons/advantages-icon.png" alt="">
+						<img class="sign"  src="images/icons/advantages-icon-hover.png" alt="">
+					</div>
 					<p class="text">ייעוץ מקצועי וליווי הנדסי</p>
 				</div>
 			</div>
@@ -416,7 +422,7 @@
 		<div class="slider">
 			<div class="item" style="width:900px">
 				<div class="caption">
-					<img class="logo" src="images/index/comment/1.jpg" alt="">
+					<img class="image" src="images/index/comment/1.jpg" alt="">
 					<div class="comments-cont">
 						<span class="image">
 							<img class="profile-image-bg" src="images/index/comment/comment-image.png" alt="">
@@ -432,27 +438,18 @@
 			</div>
 		</div>
 	</section>
-	<section class="company">
-		<div class="section-inner">
-			<div class="boxes">
-				<div class="box">
-					<img src="images/index/supersal.png" alt="">
-				</div>
-				<div class="box">
-					<img src="images/index/tivtam.png" alt="">
-				</div>
-				<div class="box">
-					<img src="images/index/bitan.png" alt="">
-				</div>
-				<div class="box">
-					<img src="images/index/mega.png" alt="">
-				</div>
-				<div class="box">
-					<img src="images/index/supersal_big.png" alt="">
-				</div>
-			</div>
+	<section class="brands-double-slider company">	
+		<div class="boxes">	
+			<ul id="scroller">
+				<li class="box"><img src="images/index/supersal.png" alt=""></li>
+				<li class="box"><img src="images/index/tivtam.png" alt=""></li>
+				<li class="box"><img src="images/index/bitan.png" alt=""></li>
+				<li class="box"><img src="images/index/mega.png" alt=""></li>
+				<li class="box"><img src="images/index/supersal_big.png" alt=""></li>
+			</ul>
 		</div>
 	</section>
+	
 	<footer>
 		<div class="contact">
 			<div class="section-inner">
@@ -563,6 +560,9 @@
 	<script>
 		$(document).ready(function ($) {
 
+			$("#scroller").simplyScroll();
+			
+			
 			$('.owl-carousel').owlCarousel({
 				items : 1, 
 			loop:true,
@@ -641,5 +641,8 @@
 			});
 		});
 	</script>
+
+
+
 </body>
 </html>
